@@ -34,8 +34,8 @@ import org.apache.thrift.transport.TTransportException;
 import org.scale7.cassandra.pelops.exceptions.PelopsException;
 import org.scale7.cassandra.pelops.pool.IThriftPool;
 import org.scale7.cassandra.pelops.pool.IThriftPool.IPooledConnection;
-import org.scale7.portability.SystemProxy;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Base class for objects operating against a Cassandra keyspace.
@@ -45,7 +45,7 @@ import org.slf4j.Logger;
  */
 public class Operand {
 
-	private static final Logger logger = SystemProxy.getLoggerFromFactory(Operand.class);
+	private static final Logger logger = LoggerFactory.getLogger(Operand.class);
 
 	protected final IThriftPool thrift;
 

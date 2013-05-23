@@ -29,15 +29,15 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-import org.scale7.portability.SystemProxy;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Selects a node based on the number of connections a node currently has in use.  The node that has the least active
  * connections will be chosen.
  */
 public class LeastLoadedNodeSelectionStrategy implements CommonsBackedPool.INodeSelectionStrategy {
-    private static final Logger logger = SystemProxy.getLoggerFromFactory(LeastLoadedNodeSelectionStrategy.class);
+    private static final Logger logger = LoggerFactory.getLogger(LeastLoadedNodeSelectionStrategy.class);
 
     @Override
     public PooledNode select(CommonsBackedPool pool, Set<String> nodeAddresses, Set<String> avoidNodesHint) {

@@ -4,8 +4,8 @@ import java.io.File;
 
 import org.apache.cassandra.io.util.FileUtils;
 import org.apache.cassandra.service.CassandraDaemon;
-import org.scale7.portability.SystemProxy;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * This class starts and stops embedded Cassandra server.
@@ -16,7 +16,7 @@ import org.slf4j.Logger;
  */
 public class EmbeddedCassandraServer {
 
-	private final Logger logger = SystemProxy.getLoggerFromFactory(EmbeddedCassandraServer.class);
+	private final Logger logger = LoggerFactory.getLogger(EmbeddedCassandraServer.class);
 
 	private String baseDirectory = "target/tmp";
 

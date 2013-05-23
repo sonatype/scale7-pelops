@@ -34,8 +34,8 @@ import org.scale7.cassandra.pelops.Cluster;
 import org.scale7.cassandra.pelops.Connection;
 import org.scale7.cassandra.pelops.OperandPolicy;
 import org.scale7.cassandra.pelops.exceptions.NoConnectionsAvailableException;
-import org.scale7.portability.SystemProxy;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * A basic non-pooled pool impl. A new connection is opened each time the {@link #getConnection()} or
@@ -44,7 +44,7 @@ import org.slf4j.Logger;
  * This class is useful for diagnostics.
  */
 public class DebuggingPool extends ThriftPoolBase {
-    private static final Logger logger = SystemProxy.getLoggerFromFactory(DebuggingPool.class);
+    private static final Logger logger = LoggerFactory.getLogger(DebuggingPool.class);
 
     private Cluster cluster;
     private String keyspace;
