@@ -1,3 +1,5 @@
+Patched build of https://github.com/s7/scale7-pelops/
+
 Introduction
 =========
 Pelops has been created to make working with Cassandra a beautiful thing (hence the nickname "Cassandra's beautiful son").

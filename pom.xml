@@ -1,6 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<!--
+	Patched build of https://github.com/s7/scale7-pelops/
+-->
+	<parent>
+		<groupId>org.sonatype.forge</groupId>
+		<artifactId>forge-parent</artifactId>
+		<version>35</version>
+	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.scale7</groupId>
+	<groupId>org.sonatype.nosql</groupId>
 	<artifactId>scale7-pelops</artifactId>
 	<packaging>jar</packaging>
 	<version>1.4-1.2.x-SNAPSHOT</version>
@@ -30,9 +38,9 @@
 		</developer>
 	</developers>
 	<scm>
-		<connection>scm:git:http://github.com/s7/scale7-pelops.git</connection>
-		<developerConnection>scm:git:git@github.com:s7/scale7-pelops.git</developerConnection>
-		<url>http://github.com/s7/scale7-pelops</url>
+		<connection>scm:git:http://github.com/sonatype/scale7-pelops.git</connection>
+		<developerConnection>scm:git:git@github.com:sonatype/scale7-pelops.git</developerConnection>
+		<url>http://github.com/sonatype/scale7-pelops</url>
 	</scm>
 	<issueManagement>
 		<url>http://github.com/s7/scale7-pelops/issues</url>
@@ -442,16 +450,18 @@
 			</plugin>
 		</plugins>
 	</reporting>
+<!--
 	<distributionManagement>
 		<repository>
 			<id>maven.scale7.org.local</id>
 			<name>Deployment Staging Area</name>
-			<!-- The ${scale7.deploy.dir} is defined in your ~/.m2/settings.xml file 
+			!-<- The ${scale7.deploy.dir} is defined in your ~/.m2/settings.xml file 
 				and it should point to the directory that contains the clone of http://github.com/s7/mvnrepo. 
-				e.g. file:///Users/dan/Development/Projects/scale7/mvnrepo -->
+				e.g. file:///Users/dan/Development/Projects/scale7/mvnrepo ->-
 			<url>${scale7.deploy.dir}</url>
 			<layout>default</layout>
 		</repository>
 	</distributionManagement>
+-->
 </project>
 
